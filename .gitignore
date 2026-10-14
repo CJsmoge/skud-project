@@ -1,0 +1,7 @@
+# Системные
+.DS_Store
+Thumbs.db
+
+# Редакторы
+.vscode/
+.idea/
