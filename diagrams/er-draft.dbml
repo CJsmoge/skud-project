@@ -1,0 +1,39 @@
+Table Employee {
+  id int [pk, increment]
+  full_name varchar(100)
+  department varchar(100)
+  position varchar(100)
+  created_at timestamp
+}
+
+Table Card {
+  id int [pk, increment]
+  employee_id int [ref: > Employee.id]
+  number varchar(20) [unique]
+  status varchar(20)
+  issued_at timestamp
+}
+
+Table Zone {
+  id int [pk, increment]
+  name varchar(100)
+  description text
+}
+
+Table Request {
+  id int [pk, increment]
+  employee_id int [ref: > Employee.id]
+  card_id int [ref: > Card.id]
+  zone_id int [ref: > Zone.id]
+  controller_id int [ref: > Controller.id]
+  event_time timestamp
+  direction varchar(10)
+}
+
+Table Controller {
+  id int [pk, increment]
+  zone_id int [ref: > Zone.id]
+  name varchar(100)
+  location varchar(255)
+  is_active boolean
+}
