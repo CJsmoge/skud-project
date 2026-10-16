@@ -112,3 +112,21 @@ graph TD
 **Компоненты:**
 - Внутренние: Web UI, Admin UI, REST API, Auth, Employee, Card, Zone, Request, Report.
 - Внешние: PostgreSQL, SMS Gateway, Controller API.
+
+## UML-диаграммы
+
+### Use Case
+
+См. `diagrams/uml-usecase.png` (PNG) и `diagrams/uml-usecase.puml` (исходник).
+
+**Акторы:** Сотрудник, Охрана, Администратор.
+
+**Прецеденты:** заявка на карту, отзыв, журнал событий, уведомление, блокировка карты, список карт.
+
+### Class Diagram
+
+См. `diagrams/uml-class.png` (PNG) и `diagrams/uml-class.puml` (исходник).
+
+**Классы:** Employee, Card, Zone, Request, Controller, StatusHistory.
+
+**Связи:** Employee 1—N Card, Employee 1—N Request, Card 1—N Request, Card 1—N StatusHistory, Zone 1—N Controller, Zone 1—N Request, Controller 1—N Request.

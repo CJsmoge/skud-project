@@ -1,0 +1,50 @@
+@startuml uml-class
+!theme plain
+
+class Employee {
+  - id: int
+  - full_name: string
+  - department: string
+  + createRequest(): Request
+}
+
+class Card {
+  - id: int
+  - number: string
+  - status: string
+  + block(): void
+}
+
+class Zone {
+  - id: int
+  - name: string
+}
+
+class Request {
+  - id: int
+  - event_time: datetime
+  - direction: string
+  + assignController(): void
+}
+
+class Controller {
+  - id: int
+  - name: string
+  - is_active: boolean
+}
+
+class StatusHistory {
+  - id: int
+  - old_status: string
+  - new_status: string
+}
+
+Employee "1" --> "*" Card : имеет
+Employee "1" --> "*" Request : совершает
+Card "1" --> "*" Request : используется
+Card "1" --> "*" StatusHistory : изменяется
+Zone "1" --> "*" Controller : содержит
+Zone "1" --> "*" Request : фиксируется
+Controller "1" --> "*" Request : регистрирует
+
+@enduml

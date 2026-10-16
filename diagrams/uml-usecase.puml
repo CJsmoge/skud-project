@@ -1,0 +1,25 @@
+@startuml uml-usecase
+!theme plain
+left to right direction
+
+actor Сотрудник as emp
+actor Охрана as guard
+actor Администратор as admin
+
+rectangle Система {
+  usecase "Оставить заявку на карту" as UC1
+  usecase "Оставить отзыв" as UC2
+  usecase "Просмотреть журнал событий" as UC3
+  usecase "Получить уведомление" as UC4
+  usecase "Заблокировать карту" as UC5
+  usecase "Просмотреть список карт" as UC6
+}
+
+emp --> UC1
+emp --> UC2
+guard --> UC3
+guard --> UC4
+admin --> UC5
+admin --> UC6
+
+@enduml
