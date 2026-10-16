@@ -32,20 +32,15 @@
 | Database | PostgreSQL | Хранение данных |
 
 ## Схема взаимодействия
-Пользователь (браузер)
-│
-▼
-┌───────────────────────┐
-│ Presentation (UI) │ ← HTML + Jinja2
-│ Controller (Flask) │ ← маршруты, обработка
-├───────────────────────┤
-│ Business Logic │ ← сервисы: доступ, карты, события
-├───────────────────────┤
-│ Data Access │ ← SQLAlchemy
-├───────────────────────┤
-│ Database (PostgreSQL)│ ← хранение данных
-└───────────────────────┘
 
+```mermaid
+graph TD
+    User[Пользователь - браузер] --> UI[Presentation - UI]
+    UI --> Ctrl[Controller - Flask]
+    Ctrl --> BL[Business Logic - сервисы]
+    BL --> DA[Data Access - SQLAlchemy]
+    DA --> DB[(Database - PostgreSQL)]
+```
 ## Модули приложения
 
 ### Бизнес-модули
