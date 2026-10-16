@@ -104,3 +104,11 @@ graph TD
     Cards --> Logger
     Requests --> Logger
 ```
+
+## UML-диаграмма компонентов
+
+См. `diagrams/uml-component.png` (PNG) и `diagrams/uml-component.puml` (исходник).
+
+**Компоненты:**
+- Внутренние: Web UI, Admin UI, REST API, Auth, Employee, Card, Zone, Request, Report.
+- Внешние: PostgreSQL, SMS Gateway, Controller API.

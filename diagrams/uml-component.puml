@@ -1,0 +1,41 @@
+@startuml uml-component
+!theme plain
+skinparam componentStyle rectangle
+
+' Внутренние компоненты
+component "Web UI" as webUI
+component "Admin UI" as adminUI
+component "REST API (Flask)" as api
+component "Auth Service" as auth
+component "Employee Service" as emp
+component "Card Service" as card
+component "Zone Service" as zone
+component "Request Service" as req
+component "Report Service" as report
+
+' Внешние компоненты
+database "PostgreSQL" as db
+cloud "SMS Gateway" as sms
+cloud "Controller API" as ctrl
+
+' Связи
+webUI --> api : HTTP
+adminUI --> api : HTTP
+api --> auth
+api --> emp
+api --> card
+api --> zone
+api --> req
+api --> report
+
+auth --> emp
+emp --> db : SQL
+card --> db : SQL
+zone --> db : SQL
+req --> db : SQL
+report --> db : SQL
+
+req --> ctrl : TCP
+req --> sms : HTTPS
+
+@enduml
