@@ -5,15 +5,15 @@ Table Employee {
   position varchar(100) [not null]
   phone varchar(20)
   email varchar(255)
-  created_at timestamp [not null]
+  created_at timestamp [not null, default: `now()`]
 }
 
 Table Card {
   id int [pk, increment]
-  employee_id int [ref: > Employee.id]
-  number varchar(20) [unique]
-  status varchar(20)
-  issued_at timestamp
+  employee_id int [not null, ref: > Employee.id]
+  number varchar(20) [unique, not null]
+  status varchar(20) [not null, default: 'active']
+  issued_at timestamp [not null, default: `now()`]
   blocked_at timestamp
 }
 
@@ -36,7 +36,7 @@ Table Request {
   card_id int [not null, ref: > Card.id]
   zone_id int [not null, ref: > Zone.id]
   controller_id int [not null, ref: > Controller.id]
-  event_time timestamp [not null]
+  event_time timestamp [not null, default: `now()`]
   direction varchar(10) [not null]
 }
 
@@ -45,7 +45,7 @@ Table Controller {
   zone_id int [not null, ref: > Zone.id]
   name varchar(100) [not null]
   location varchar(255)
-  is_active boolean [not null]
+  is_active boolean [not null, default: true]
 }
 
 Table StatusHistory {
@@ -53,5 +53,5 @@ Table StatusHistory {
   card_id int [not null, ref: > Card.id]
   old_status varchar(20) [not null]
   new_status varchar(20) [not null]
-  changed_at timestamp [not null]
+  changed_at timestamp [not null, default: `now()`]
 }
