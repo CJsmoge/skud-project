@@ -81,30 +81,31 @@
 - **Циклических зависимостей нет.**
 
 ## Схема модулей
-┌─────────────────────────────────────────────────┐
-│ UI (Flask) │
-└─────────────────────┬───────────────────────────┘
-│
-┌─────────────┼─────────────┐
-│ │ │
-┌────▼────┐ ┌────▼────┐ ┌────▼────┐
-│ Auth │ │Employees│ │ Cards │
-└────┬────┘ └────┬────┘ └────┬────┘
-│ │ │
-└─────┬───────┴───────┬─────┘
-│ │
-┌─────▼─────┐ ┌─────▼─────┐
-│ Zones │ │ Requests │
-└─────┬─────┘ └─────┬─────┘
-│ │
-└───────┬───────┘
-│
-┌─────▼─────┐
-│ Reports │
-└─────┬─────┘
-│
-┌─────────────┼─────────────┐
-│ │ │
-┌────▼────┐ ┌────▼────┐ ┌────▼────┐
-│ DB │ │ Logger │ │ SMS │
-└─────────┘ └─────────┘ └─────────┘
+
+```mermaid
+graph TD
+    UI[UI - Flask] --> Auth[Auth]
+    UI --> Employees[Employees]
+    UI --> Cards[Cards]
+    UI --> Zones[Zones]
+    UI --> Requests[Requests]
+    UI --> Reports[Reports]
+    
+    Auth --> Employees
+    Employees --> Cards
+    Employees --> Requests
+    Cards --> Requests
+    Zones --> Requests
+    Zones --> Controllers[ControllerAPI]
+    Requests --> Reports
+    Requests --> SMS[SMSGateway]
+    
+    Employees --> DB[(PostgreSQL)]
+    Cards --> DB
+    Zones --> DB
+    Requests --> DB
+    
+    Auth --> Logger[Logger]
+    Cards --> Logger
+    Requests --> Logger
+```
