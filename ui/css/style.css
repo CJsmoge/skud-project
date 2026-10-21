@@ -1,6 +1,4 @@
-/* ===== КАРКАС И КОМПОНЕНТЫ СКУД ===== */
 
-/* Шапка */
 .site-header {
   background: var(--white);
   border-bottom: 1px solid var(--border);
@@ -39,7 +37,6 @@
   text-decoration: none;
 }
 
-/* Главный экран (Hero) */
 .hero {
   padding: 80px 0;
   text-align: center;
@@ -60,7 +57,6 @@
   margin-right: auto;
 }
 
-/* Карточки */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -89,7 +85,6 @@
   margin-bottom: 16px;
 }
 
-/* Статусные карточки (для журнала) */
 .status-card {
   border-left: 4px solid var(--primary);
 }
@@ -102,7 +97,6 @@
   border-left-color: var(--danger);
 }
 
-/* Подвал */
 .site-footer {
   background: var(--dark);
   color: var(--white);
@@ -111,7 +105,6 @@
   margin-top: 60px;
 }
 
-/* Таблица (для журнала событий) */
 .events-table {
   width: 100%;
   border-collapse: collapse;
