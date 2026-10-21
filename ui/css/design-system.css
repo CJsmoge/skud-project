@@ -1,0 +1,148 @@
+/* ===== ДИЗАЙН-СИСТЕМА СКУД ===== */
+
+:root {
+  /* Цвета */
+  --primary: #2563EB;
+  --primary-hover: #1E4FBF;
+  --secondary: #64748B;
+  --accent: #F59E0B;
+  --success: #10B981;
+  --danger: #EF4444;
+  --text: #1E293B;
+  --text-muted: #64748B;
+  --bg: #F8FAFC;
+  --white: #FFFFFF;
+  --border: #E2E8F0;
+  --dark: #0F172A;
+
+  /* Типографика */
+  --font-main: 'Inter', system-ui, sans-serif;
+  --fs-h1: 2rem;
+  --fs-h2: 1.5rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* Сетка */
+  --container: 1200px;
+  --gap: 24px;
+  --radius: 8px;
+
+  /* Тени */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Контейнер */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+/* Типографика */
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: var(--white);
+}
+
+.btn-success {
+  background: var(--success);
+  color: var(--white);
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.125rem;
+}
+
+/* Бейджи (статусы) */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+}
+
+.badge-success {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.badge-danger {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.badge-warning {
+  background: #FEF3C7;
+  color: #92400E;
+}
