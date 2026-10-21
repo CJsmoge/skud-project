@@ -1,0 +1,18 @@
+:root {
+  --bs-primary: #2563EB;
+  --bs-primary-rgb: 37, 99, 235;
+}
+
+.btn-primary {
+  background-color: #2563EB;
+  border-color: #2563EB;
+}
+
+.btn-primary:hover {
+  background-color: #1E4FBF;
+  border-color: #1E4FBF;
+}
+
+.navbar-brand {
+  color: #2563EB !important;
+}

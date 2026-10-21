@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СКУД — Проходная (Bootstrap)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">СКУД</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="master-bootstrap.html">Журнал</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin-bootstrap.html">Управление</a></li>
+        </ul>
+        <a href="#" class="btn btn-primary">Войти</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <h1 class="display-4 fw-bold mb-3">Электронная проходная</h1>
+          <p class="lead text-muted mb-4">Контроль доступа на территорию организации. Быстрый проход по карте, онлайн-журнал событий, блокировка утерянных карт.</p>
+          <a href="#" class="btn btn-primary btn-lg">Пройти по карте</a>
+        </div>
+        <div class="col-12 col-lg-6 text-center">
+          <div class="bg-primary bg-opacity-10 rounded-4 p-5">
+            <span class="display-1">🚪</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5">Возможности системы</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Быстрый проход</h5>
+              <p class="card-text text-muted">Приложите карту к турникету — доступ откроется за 0.3 секунды.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Журнал событий</h5>
+              <p class="card-text text-muted">Все проходы фиксируются онлайн. Охрана видит события в реальном времени.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Блокировка карт</h5>
+              <p class="card-text text-muted">Потеряли карту? Администратор заблокирует её за один клик.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5" id="order">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <h2 class="text-center mb-4">Заявка на пропуск</h2>
+          <form class="bg-white p-4 rounded shadow-sm">
+            <div class="mb-3">
+              <label for="name" class="form-label">ФИО</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Телефон</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="zone" class="form-label">Зона доступа</label>
+              <select class="form-select" id="zone">
+                <option>Главный вход</option>
+                <option>Склад</option>
+                <option>Офис</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label">Комментарий</label>
+              <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4 text-center">
+    <div class="container">
+      <p class="mb-0">© 2026 Электронная проходная (СКУД). Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
