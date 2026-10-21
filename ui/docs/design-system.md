@@ -28,3 +28,13 @@
 - **Поле ввода:** с рамкой, фокус — синяя рамка.
 - **Таблица:** для журнала событий.
 - **Бейдж:** для статусов (active/blocked).
+
+## Сравнение Bootstrap и Tailwind (СКУД)
+
+| Элемент | Bootstrap | Tailwind |
+|---|---|---|
+| Карточка | `card` + `card-body` | `bg-white rounded-xl shadow-sm p-5` |
+| Кнопка | `btn btn-primary` | `bg-blue-600 hover:bg-blue-700 text-white` |
+| Сетка | `row` + `col-md-6` | `grid grid-cols-1 md:grid-cols-2` |
+| Sidebar скрыт на мобильном | `d-none d-lg-block` | `hidden lg:flex` |
+| Таблица | `table table-hover` | `w-full text-left divide-y` |
