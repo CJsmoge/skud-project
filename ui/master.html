@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СКУД — Журнал событий (Охрана)</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="master-page">
+
+  <div class="master-layout">
+    <aside class="master-sidebar">
+      <h2 class="sidebar-logo">СКУД</h2>
+      <nav class="sidebar-nav">
+        <a href="#" class="sidebar-link active">Журнал событий</a>
+        <a href="#" class="sidebar-link">Поиск</a>
+        <a href="#" class="sidebar-link">Отчёты</a>
+        <a href="#" class="sidebar-link">Настройки</a>
+      </nav>
+    </aside>
+
+    <header class="master-header">
+      <h1>Журнал событий</h1>
+      <div class="header-status">
+        <span class="badge badge-success">Онлайн</span>
+        <span class="header-time">14:32</span>
+      </div>
+    </header>
+
+    <main class="master-main">
+      <div class="requests-list">
+        <div class="list-header">
+          <span>Время</span>
+          <span>Сотрудник</span>
+          <span>Зона</span>
+          <span>Турникет</span>
+          <span>Статус</span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-time">09:15</span>
+          <span class="cell-name">Иван Петрович</span>
+          <span class="cell-zone">Главный вход</span>
+          <span class="cell-controller">Турникет №1</span>
+          <span class="cell-status"><span class="badge badge-success">Разрешён</span></span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-time">09:17</span>
+          <span class="cell-name">Анна Сергеевна</span>
+          <span class="cell-zone">Главный вход</span>
+          <span class="cell-controller">Турникет №1</span>
+          <span class="cell-status"><span class="badge badge-success">Разрешён</span></span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-time">09:22</span>
+          <span class="cell-name">Неизвестный</span>
+          <span class="cell-zone">Главный вход</span>
+          <span class="cell-controller">Турникет №2</span>
+          <span class="cell-status"><span class="badge badge-danger">Запрещён</span></span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-time">09:30</span>
+          <span class="cell-name">Сергей Николаевич</span>
+          <span class="cell-zone">Склад</span>
+          <span class="cell-controller">Турникет №3</span>
+          <span class="cell-status"><span class="badge badge-success">Разрешён</span></span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-time">09:45</span>
+          <span class="cell-name">Иван Петрович</span>
+          <span class="cell-zone">Склад</span>
+          <span class="cell-controller">Турникет №3</span>
+          <span class="cell-status"><span class="badge badge-warning">Заблокирован</span></span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="master-footer">
+      <p>СКУД © 2026. Пост охраны.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
