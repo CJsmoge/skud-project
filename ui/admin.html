@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СКУД — Управление (Администратор)</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="master-page">
+
+  <div class="master-layout">
+    <aside class="master-sidebar">
+      <h2 class="sidebar-logo">СКУД</h2>
+      <nav class="sidebar-nav">
+        <a href="master.html" class="sidebar-link">📋 Журнал событий</a>
+        <a href="admin.html" class="sidebar-link active">👥 Сотрудники и карты</a>
+        <a href="index.html" class="sidebar-link">🏠 На главную</a>
+      </nav>
+    </aside>
+
+    <header class="master-header">
+      <h1>Управление доступом</h1>
+      <div class="header-status">
+        <span class="badge badge-success">Администратор</span>
+      </div>
+    </header>
+
+    <main class="master-main">
+      <div class="d-flex justify-content-between align-items-center mb-4" style="display: flex; justify-content: space-between; margin-bottom: 24px;">
+        <h2 style="margin: 0;">Список сотрудников</h2>
+        <button class="btn btn-primary">+ Добавить сотрудника</button>
+      </div>
+
+      <div class="requests-list" style="grid-template-columns: 1fr 150px 150px 120px;">
+        <div class="list-header">
+          <span>ФИО</span>
+          <span>Отдел</span>
+          <span>Карта</span>
+          <span>Действие</span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-name">Иван Петрович</span>
+          <span>IT-отдел</span>
+          <span><span class="badge badge-success">Активна</span></span>
+          <span><button class="btn btn-danger" style="padding: 6px 12px; font-size: 0.875rem;">Заблокировать</button></span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-name">Анна Сергеевна</span>
+          <span>Бухгалтерия</span>
+          <span><span class="badge badge-success">Активна</span></span>
+          <span><button class="btn btn-danger" style="padding: 6px 12px; font-size: 0.875rem;">Заблокировать</button></span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-name">Сергей Николаевич</span>
+          <span>Склад</span>
+          <span><span class="badge badge-warning">Заблокирована</span></span>
+          <span><button class="btn btn-success" style="padding: 6px 12px; font-size: 0.875rem;">Разблокировать</button></span>
+        </div>
+
+        <div class="request-row">
+          <span class="cell-name">Ольга Ивановна</span>
+          <span>Отдел кадров</span>
+          <span><span class="badge badge-success">Активна</span></span>
+          <span><button class="btn btn-danger" style="padding: 6px 12px; font-size: 0.875rem;">Заблокировать</button></span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="master-footer">
+      <p>СКУД © 2026. Кабинет администратора.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
