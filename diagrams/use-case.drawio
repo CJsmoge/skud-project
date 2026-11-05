@@ -1,0 +1,85 @@
+<mxfile host="65bd71144e">
+    <diagram id="xDEsj6LMMWsmQcD54Uv9" name="Page-1">
+        <mxGraphModel dx="2630" dy="673" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="system" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;fillColor=none;strokeColor=#333333;strokeWidth=2;dashed=0;" value="Языковой портал" vertex="1">
+                    <mxGeometry height="700" width="700" x="250" y="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor-client" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Клиент" vertex="1">
+                    <mxGeometry height="80" width="40" x="80" y="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor-manager" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Менеджер" vertex="1">
+                    <mxGeometry height="80" width="40" x="1080" y="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-view-main" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Просмотр главной" vertex="1">
+                    <mxGeometry height="50" width="200" x="350" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-view-courses" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Просмотр курсов" vertex="1">
+                    <mxGeometry height="50" width="200" x="350" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-calc" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Расчёт стоимости" vertex="1">
+                    <mxGeometry height="50" width="200" x="350" y="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-signup" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Запись на урок" vertex="1">
+                    <mxGeometry height="50" width="200" x="350" y="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-fill-contacts" parent="1" style="ellipse;whiteSpace=wrap;html=1;dashed=1;" value="Заполнить контакты" vertex="1">
+                    <mxGeometry height="50" width="200" x="650" y="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-choose-course" parent="1" style="ellipse;whiteSpace=wrap;html=1;dashed=1;" value="Выбрать курс" vertex="1">
+                    <mxGeometry height="50" width="200" x="650" y="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-clarify" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Уточнение деталей" vertex="1">
+                    <mxGeometry height="50" width="200" x="650" y="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-enroll" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Запись после оплаты" vertex="1">
+                    <mxGeometry height="50" width="200" x="650" y="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-accounting" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Ведение учёта" vertex="1">
+                    <mxGeometry height="50" width="200" x="650" y="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-mailing" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Рассылка" vertex="1">
+                    <mxGeometry height="50" width="200" x="350" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="uc-cert" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Выдача сертификатов" vertex="1">
+                    <mxGeometry height="50" width="200" x="650" y="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge1" edge="1" parent="1" source="actor-client" style="endArrow=none;html=1;rounded=0;" target="uc-view-main">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge2" edge="1" parent="1" source="actor-client" style="endArrow=none;html=1;rounded=0;" target="uc-view-courses">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge3" edge="1" parent="1" source="actor-client" style="endArrow=none;html=1;rounded=0;" target="uc-calc">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge4" edge="1" parent="1" source="actor-client" style="endArrow=none;html=1;rounded=0;" target="uc-signup">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge5" edge="1" parent="1" source="actor-manager" style="endArrow=none;html=1;rounded=0;" target="uc-clarify">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge6" edge="1" parent="1" source="actor-manager" style="endArrow=none;html=1;rounded=0;" target="uc-enroll">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge7" edge="1" parent="1" source="actor-manager" style="endArrow=none;html=1;rounded=0;" target="uc-accounting">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge8" edge="1" parent="1" source="actor-manager" style="endArrow=none;html=1;rounded=0;" target="uc-mailing">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge9" edge="1" parent="1" source="actor-manager" style="endArrow=none;html=1;rounded=0;" target="uc-cert">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="include1" edge="1" parent="1" source="uc-signup" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;verticalAlign=bottom;" target="uc-fill-contacts" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="include2" edge="1" parent="1" source="uc-signup" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;verticalAlign=bottom;" target="uc-choose-course" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
