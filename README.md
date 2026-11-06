@@ -63,9 +63,9 @@
 
 ## Технологии
 
-- **Backend:** Flask, SQLAlchemy.
+- **Backend:** SQL.
 - **БД:** PostgreSQL.
-- **Frontend:** HTML + Jinja2.
+- **Frontend:** HTML + CSS.
 - **Архитектура:** монолит + MVC + слоистая.
 
 ## Версии
