@@ -25,34 +25,41 @@
         <h2 style="text-align: center; margin-bottom: 10px;">Записаться на урок</h2>
         <p style="text-align: center; color: #6b7280; margin-bottom: 30px;">Оставьте заявку, и мы свяжемся с вами.</p>
 
-        <form onsubmit="event.preventDefault(); alert('Заявка успешно отправлена!');">
+        <form id="signupForm" novalidate>
           <div class="form-group">
             <label>ФИО:</label>
-            <input type="text" placeholder="Иванов Иван" required>
+            <input id="fullName" type="text" placeholder="Иванов Иван">
+            <div class="error-text" id="err-fullName" style="color: red; font-size: 14px;"></div>
           </div>
           <div class="form-group">
             <label>Телефон:</label>
-            <input type="tel" placeholder="+7(999)-123-45-67" required pattern="\+7\(\d{3}\)-\d{3}-\d{2}-\d{2}" title="Формат: +7(XXX)-XXX-XX-XX">
+            <input id="phone" type="tel" placeholder="+7(999)-123-45-67">
+            <div class="error-text" id="err-phone" style="color: red; font-size: 14px;"></div>
           </div>
           <div class="form-group">
             <label>Email:</label>
-            <input type="email" placeholder="ivan@mail.ru" required>
+            <input id="email" type="email" placeholder="ivan@mail.ru">
+            <div class="error-text" id="err-email" style="color: red; font-size: 14px;"></div>
           </div>
           <div class="form-group">
             <label>Выберите курс:</label>
-            <select required>
+            <select id="courseId">
               <option value="">-- Выберите --</option>
-              <option>Английский</option>
-              <option>Немецкий</option>
-              <option>Французский</option>
             </select>
+            <div class="error-text" id="err-courseId" style="color: red; font-size: 14px;"></div>
           </div>
           <div class="checkbox-group">
-            <input type="checkbox" id="agree" required>
+            <input type="checkbox" id="agree">
             <label for="agree" style="margin: 0; font-weight: normal;">Я согласен на обработку персональных данных</label>
           </div>
+          <div class="error-text" id="err-agree" style="color: red; font-size: 14px; margin-bottom: 15px;"></div>
+          
           <button type="submit" class="btn" style="width: 100%;">Записаться</button>
         </form>
+
+        <div id="success" style="display: none; color: green; font-weight: bold; text-align: center; margin-top: 20px;">
+          Заявка успешно отправлена! Мы свяжемся с вами.
+        </div>
       </div>
     </div>
   </section>
@@ -63,5 +70,6 @@
     </div>
   </footer>
 
+  <script src="js/signup.js"></script>
 </body>
 </html>
