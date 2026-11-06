@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Курсы — LinguaPro</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🌍 LinguaPro</a>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="courses.html" class="active">Курсы</a>
+        <a href="signup.html" class="btn">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Наши курсы</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>🇬🇧 Английский язык</h3>
+          <p>Общий курс, разговорный, подготовка к экзаменам.</p>
+          <p style="margin-top: 15px; font-weight: bold; color: #4f46e5;">от 8 000 ₽/мес</p>
+        </div>
+        <div class="card">
+          <h3>🇩🇪 Немецкий язык</h3>
+          <p>Для начинающих и продолжающих. Подготовка к Goethe.</p>
+          <p style="margin-top: 15px; font-weight: bold; color: #4f46e5;">от 7 500 ₽/мес</p>
+        </div>
+        <div class="card">
+          <h3>🇫🇷 Французский язык</h3>
+          <p>Курсы для взрослых и детей. Изучение с носителями.</p>
+          <p style="margin-top: 15px; font-weight: bold; color: #4f46e5;">от 8 500 ₽/мес</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #f3f4f6;">
+    <div class="container">
+      <h2 class="section-title">Калькулятор стоимости</h2>
+      <div class="calc-box">
+        <div class="form-group">
+          <label>Длительность занятия:</label>
+          <select id="calc-duration">
+            <option value="1">60 минут</option>
+            <option value="1.5">90 минут</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Количество занятий:</label>
+          <input type="number" id="calc-lessons" value="8" min="1">
+        </div>
+        <div class="form-group">
+          <label>Тариф:</label>
+          <select id="calc-tariff">
+            <option value="1">Выгодный (без отмен)</option>
+            <option value="1.2">Комфортный (можно отменять)</option>
+            <option value="1.5">Усиленный (с методистом)</option>
+          </select>
+        </div>
+        <button class="btn" style="width: 100%;" onclick="calculatePrice()">Рассчитать</button>
+        <div class="calc-result-box">
+          Примерная стоимость: <br>
+          <strong id="calc-result">0</strong> ₽
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 LinguaPro. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    function calculatePrice() {
+      const basePrice = 1200;
+      const durationCoef = parseFloat(document.getElementById('calc-duration').value);
+      const lessonsCount = parseInt(document.getElementById('calc-lessons').value);
+      const tariffCoef = parseFloat(document.getElementById('calc-tariff').value);
+      const total = basePrice * durationCoef * lessonsCount * tariffCoef;
+      document.getElementById('calc-result').textContent = Math.round(total).toLocaleString('ru-RU');
+    }
+    window.onload = calculatePrice;
+  </script>
+</body>
+</html>

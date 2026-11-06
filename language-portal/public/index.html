@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaPro — Школа иностранных языков</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">🌍 LinguaPro</a>
+      <nav>
+        <a href="index.html" class="active">Главная</a>
+        <a href="courses.html">Курсы</a>
+        <a href="signup.html" class="btn">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Открой мир с иностранными языками</h1>
+      <p>Курсы английского, немецкого и французского с носителями языка.</p>
+      <a href="signup.html" class="btn">Записаться на бесплатный урок</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Почему выбирают нас</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Опытные педагоги</h3>
+          <p>Носители языка и преподаватели с опытом работы за рубежом.</p>
+        </div>
+        <div class="card">
+          <h3>Удобный график</h3>
+          <p>Группы по 6-8 человек или индивидуальные занятия.</p>
+        </div>
+        <div class="card">
+          <h3>Честные цены</h3>
+          <p>Без скрытых платежей, гибкая система скидок.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #fff;">
+    <div class="container">
+      <h2 class="section-title">Отзывы наших учеников</h2>
+      <div class="slider">
+        <div class="review-card active">
+          <p>«Занималась в группе с носителем. За 3 месяца подтянула английский!»</p>
+          <span class="review-author">— Анна, 24 года</span>
+        </div>
+        <div class="review-card">
+          <p>«Очень удобно, что можно переносить занятия.»</p>
+          <span class="review-author">— Дмитрий, 31 год</span>
+        </div>
+        <div class="review-card">
+          <p>«Готовлюсь к IELTS. Педагог объясняет всё понятно.»</p>
+          <span class="review-author">— Екатерина, 19 лет</span>
+        </div>
+      </div>
+      <div class="slider-dots">
+        <span class="dot active" onclick="showReview(0)"></span>
+        <span class="dot" onclick="showReview(1)"></span>
+        <span class="dot" onclick="showReview(2)"></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>📍 г. Москва, ул. Ленина, 10</p>
+      <p>📞 +7 (999) 123-45-67 | ✉️ info@linguapro.ru</p>
+      <p style="margin-top: 20px;">© 2026 LinguaPro. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    function showReview(index) {
+      const cards = document.querySelectorAll('.review-card');
+      const dots = document.querySelectorAll('.dot');
+      cards.forEach(c => c.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      cards[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+  </script>
+</body>
+</html>
