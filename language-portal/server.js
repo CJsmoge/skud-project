@@ -9,7 +9,7 @@ const pool = new Pool({
   port: 5432,
   database: 'language_portal',
   user: 'postgres',
-  password: 'ваш_пароль' // <-- ЗАМЕНИ
+  password: '123' // <-- ЗАМЕНИ
 });
 
 app.use(express.json());
